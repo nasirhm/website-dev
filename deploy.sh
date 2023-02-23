@@ -9,10 +9,6 @@ npm install
 # build - creates static site (html, css, js) in dist/
 npm run build
 
-# configure github user
-git config user.name "octocat"
-git config user.email "octocat@github.com"
-
 # go into build output
 cd dist/
 
@@ -20,6 +16,11 @@ cd dist/
 touch .nojekyll
 
 git init
+
+# configure github user
+git config user.name "octocat"
+git config user.email "octocat@github.com"
+
 git checkout -B dev-deploy
 git add -A
 git commit -m 'Deployment'
