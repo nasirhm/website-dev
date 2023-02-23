@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# install dependencies
+npm install
+
 # build - creates static site (html, css, js) in dist/
 npm run build
 
@@ -13,6 +16,11 @@ cd dist/
 touch .nojekyll
 
 git init
+
+# configure github user
+git config user.name "octocat"
+git config user.email "octocat@github.com"
+
 git checkout -B dev-deploy
 git add -A
 git commit -m 'Deployment'
