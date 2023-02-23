@@ -13,7 +13,7 @@ jobs:
       - name: Checkout hugo-devel
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: AEC-WS-01-FIX
       - name: Deploy to Github Pages Script
         run: ./deploy.sh
         shell: bash
