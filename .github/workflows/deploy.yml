@@ -1,5 +1,8 @@
 name: Build and Deploy to Github Pages
 
+env:
+  REPO_AUTH: ${{ secrets.TARGET_REPO_AUTH }}
+
 on:
   push:
     branches:
