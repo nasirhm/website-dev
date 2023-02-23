@@ -3,7 +3,7 @@ name: Build and Deploy to Github Pages
 on:
   push:
     branches:
-      - master
+      - AEC-WS-01-FIX
 
 jobs:
   build:
