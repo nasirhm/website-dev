@@ -17,10 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: AEC-WS-01-FIX
-            #- name: Deploy to Github Pages Script
-            #  run: ./deploy.sh
-            #  shell: bash
-            #  env:
-            #    REPO_AUTH: ${{ secrets.TARGET_REPO_AUTH }}
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
+      - name: Deploy to Github Pages Script
+        run: ./deploy.sh
+        shell: bash
+        env:
+          REPO_AUTH: ${{ secrets.TARGET_REPO_AUTH }}
