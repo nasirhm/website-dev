@@ -20,3 +20,5 @@ jobs:
       - name: Deploy to Github Pages Script
         run: ./deploy.sh
         shell: bash
+        env:
+          REPO_AUTH: ${{ secrets.TARGET_REPO_AUTH }}
