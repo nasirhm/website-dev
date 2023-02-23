@@ -3,6 +3,9 @@
 # abort on errors
 set -e
 
+# install dependencies
+npm install
+
 # build - creates static site (html, css, js) in dist/
 npm run build
 
