@@ -27,4 +27,8 @@ git commit -m 'Deployment'
 
 echo "${REPO_AUTH}"
 
+TARGET_REPO="https://${REPO_AUTH}@github.com/Applied-Engineering-FC/applied-engineering-fc.github.io.git"
+
+echo $TARGET_REPO
+
 git push -f "https://${REPO_AUTH}@github.com/Applied-Engineering-FC/applied-engineering-fc.github.io.git" dev-deploy
