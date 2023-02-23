@@ -9,6 +9,10 @@ npm install
 # build - creates static site (html, css, js) in dist/
 npm run build
 
+# configure github user
+git config user.name "octocat"
+git config user.email "octocat@github.com"
+
 # go into build output
 cd dist/
 
