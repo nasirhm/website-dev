@@ -2,12 +2,15 @@ import React from 'react';
 
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
-import HeroHome from '../partials/HeroHome';
+import HeroAboutUs from '../partials/HeroAboutUs';
 import FeaturesBlocks from '../partials/FeaturesBlocks';
+import FeaturesZigZag from '../partials/FeaturesZigzag';
+import BoardMembers from '../partials/BoardMembers';
+import Newsletter from '../partials/Newsletter';
 import Banner from '../partials/Banner';
 import Footer from '../partials/Footer';
 
-function Home() {
+function AboutUs() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -21,8 +24,8 @@ function Home() {
         </div>
 
         {/*  Page sections */}
-        <HeroHome />
-        <FeaturesBlocks />
+        <HeroAboutUs />
+        <BoardMembers />
       </main>
 
       <Banner />
@@ -33,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default AboutUs;

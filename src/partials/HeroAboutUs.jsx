@@ -39,15 +39,20 @@ function HeroHome() {
             <h1 className="h1 mb-4" data-aos="fade-up">
               Applied Engineering Club at Fullerton College
             </h1>
+            <h4 className="h4 mb-4" data-aos="fade-up">
+              About Us
+            </h4>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
-              A project-based club to apply engineering concepts on real world scenarios.
+              Introducing Applied Engineering Club (AEC) at Fullerton College, We’ll be collaborating to work on real time projects that’ll increase your understanding with various topics in Engineering Disciplines. Along with providing you access to Club Organized Workshops that’ll get you equipped with the relevant skill set required to work on different projects ranging from Aerospace Engineering to 3D Modeling and Computer Science.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+							{/*
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-gray-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="AboutUs">
+                <a className="btn text-white bg-gray-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">
                   About Us
                 </a>
               </div>
+							*/}
               <div data-aos="fade-up" data-aos-delay="600">
                <a className="btn text-white bg-purple-600 hover:bg-gray-700 w-full sm:w-auto sm:ml-4" href="https://discord.gg/WyYaKRtxny" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-discord center mt-1" viewBox="0 0.5 20 20">
@@ -58,50 +63,8 @@ function HeroHome() {
               </div>
             </div>
           </div>
-
-          {/* Hero image */}
-          <div>
-            <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-              <img className="mx-auto" src={HeroImage} width="1024" height="504" alt="Hero" />
-              <a
-                className="absolute group"
-                href="#0"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setVideoModalOpen(true);
-                }}
-                aria-controls="modal"
-              >
-                <svg
-                  className="w-16 h-16 sm:w-20 sm:h-20 hover:opacity-75 transition duration-150 ease-in-out"
-                  viewBox="0 0 88 88"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient x1="78.169%" y1="9.507%" x2="24.434%" y2="90.469%" id="a">
-                      <stop stopColor="#EBF1F5" stopOpacity=".8" offset="0%" />
-                      <stop stopColor="#EBF1F5" offset="100%" />
-                    </linearGradient>
-                  </defs>
-                  <circle fill="url(#a)" cx="44" cy="44" r="44" />
-                  <path
-                    className="fill-current text-purple-600"
-                    d="M52 44a.999.999 0 00-.427-.82l-10-7A1 1 0 0040 37V51a.999.999 0 001.573.82l10-7A.995.995 0 0052 44V44c0 .001 0 .001 0 0z"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Modal */}
-            <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
-              <div className="relative pb-9/16">
-                <iframe className="absolute w-full h-full" src="https://player.vimeo.com/video/174002812" title="Video" allowFullScreen></iframe>
-              </div>
-            </Modal>
-          </div>
+					</div>
         </div>
-      </div>
     </section>
   );
 }
