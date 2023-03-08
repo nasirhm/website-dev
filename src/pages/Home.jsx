@@ -4,7 +4,6 @@ import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import HeroHome from '../partials/HeroHome';
 import FeaturesBlocks from '../partials/FeaturesBlocks';
-import Banner from '../partials/Banner';
 import Footer from '../partials/Footer';
 
 function Home() {
@@ -25,7 +24,6 @@ function Home() {
         <FeaturesBlocks />
       </main>
 
-      <Banner />
 
       {/*  Site footer */}
       <Footer />

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Modal from '../utils/Modal';
-
-import HeroImage from '../images/hero-image-01.jpg';
+import youtubeSource from '../youtubeSource.json';
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const regularExpression = new RegExp(".*\/"); 
+  let youtubeID = youtubeSource.embedLink.replace( regularExpression, "");//extracts youtubeID from youtubeSource by replacing everything else with nothing
 
   return (
     <section>
@@ -62,7 +63,7 @@ function HeroHome() {
           {/* Hero image */}
           <div>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-              <img className="mx-auto" src={HeroImage} width="1024" height="504" alt="Hero" />
+            <img className="mx-auto" src={"https://img.youtube.com/vi/"+youtubeID+"/maxresdefault.jpg"} width="1024" height="504" alt="Hero" /> {/* if thumbnail isn't working try replacing "maxresdefault" with "0". Sometimes youtube does not have a maxresdefault thumbnail*/}
               <a
                 className="absolute group"
                 href="#0"
@@ -96,7 +97,7 @@ function HeroHome() {
             {/* Modal */}
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
-                <iframe className="absolute w-full h-full" src="https://player.vimeo.com/video/174002812" title="Video" allowFullScreen></iframe>
+                <iframe className="absolute w-full h-full" src={youtubeSource.embedLink} title="Video" allowFullScreen></iframe>
               </div>
             </Modal>
           </div>
