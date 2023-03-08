@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../utils/Modal';
 import youtubeSource from '../youtubeSource.json';
+import { Link } from 'react-router-dom';
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -45,9 +46,9 @@ function HeroHome() {
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-gray-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="AboutUs">
+                <Link className="btn text-white bg-gray-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" to="/AboutUs">
                   About Us
-                </a>
+                </Link>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                <a className="btn text-white bg-purple-600 hover:bg-gray-700 w-full sm:w-auto sm:ml-4" href="https://discord.gg/WyYaKRtxny" target="_blank">
